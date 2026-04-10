@@ -1,0 +1,261 @@
+================================================================================
+AGENT ORCHESTRATION SKILL - QUICK START UPLOAD GUIDE
+================================================================================
+
+PACKAGE VERSION: 1.0.0
+CREATED: 2026-04-02
+AUTHOR: Mark Bockrath, MAB AI Strategies LLC
+
+================================================================================
+WHAT YOU HAVE
+================================================================================
+
+✓ manifest.json          (2.1 KB) - Official skill metadata & configuration
+✓ SKILL.md              (7.2 KB) - Core instruction set for Claude
+✓ README.md             (7.4 KB) - Documentation & feature overview
+✓ IMPLEMENTATION_GUIDE.md (12 KB) - Detailed adoption roadmap
+✓ schema.json           (8.3 KB) - JSON schema for validation
+✓ LICENSE.md            (1.6 KB) - MIT open source license
+
+TOTAL PACKAGE: 48 KB (extremely lightweight)
+
+================================================================================
+HOW TO UPLOAD TO CLAUDE (3 STEPS)
+================================================================================
+
+OPTION 1: CLAUDE.AI (Recommended for Pro/Team Plans)
+─────────────────────────────────────────────────────
+
+1. Go to Settings → Skills (top right menu)
+2. Click "Add Skill" button
+3. Upload these 2 files when prompted:
+   - manifest.json
+   - SKILL.md
+4. Configure:
+   ✓ Activation: "Active by default"
+   ✓ Priority: "High"
+   ✓ Trigger keywords: Agent, Orchestration, Skill Management
+5. Save & Done!
+
+OPTION 2: CUSTOM INSTRUCTIONS (Free alternative)
+──────────────────────────────────────────────────
+
+1. Go to Settings → Custom Instructions
+2. In "System Prompt" field, paste ENTIRE content of SKILL.md
+3. Save
+4. Skill now active for all conversations
+
+OPTION 3: CLAUDE API (For Developers)
+──────────────────────────────────────
+
+Add to system prompt in your code:
+
+```python
+system_prompt = open("SKILL.md").read()
+
+message = client.messages.create(
+    model="claude-opus-4-20250514",
+    max_tokens=2048,
+    system=system_prompt,
+    messages=[{"role": "user", "content": "Your prompt"}]
+)
+```
+
+================================================================================
+WHAT THIS SKILL DOES
+================================================================================
+
+5 CORE PROTOCOLS:
+
+1. SKILL SWEET SPOT PROTOCOL
+   → Maintain 5-15 active skills to prevent context bloat
+   
+2. NEGATIVE CONSTRAINT ENGINEERING
+   → Enforce opinionated design/code standards
+   → No generic Bootstrap UI, pure black/white, or unfinished code
+   
+3. CHECKPOINT WORKFLOW
+   → PLAN → MOCK → EXECUTE → VERIFY → DOCUMENT
+   → Prevents misaligned expectations on complex tasks
+   
+4. SESSION HYGIENE
+   → Rotate sessions after ~30 messages for clarity
+   → Use .agent/notes.md for persistence between sessions
+   
+5. ARTIFACT STANDARDS
+   → Professional naming: proposal-v2.1.pdf
+   → Storage in artifacts/ or .agent/ folders
+   → Metadata tagging for searchability
+
+================================================================================
+QUICK REFERENCE
+================================================================================
+
+TRIGGER WORDS TO ACTIVATE:
+- "agent"
+- "orchestration"
+- "skill management"
+- "checkpoint workflow"
+- "negative constraints"
+
+MANUAL ACTIVATION:
+- /agent-orchestration (if using skills system)
+
+OVERRIDE COMMANDS:
+- "NO CONSTRAINTS" → Temporarily disable constraints
+- "DRAFT MODE" → Relax production-ready requirements
+- "SIMPLE" → Use minimal application
+
+================================================================================
+ADOPTION ROADMAP
+================================================================================
+
+WEEK 1: Foundation
+  □ Read SKILL.md fully
+  □ Audit current skill/tool count
+  □ Apply Negative Constraint Engineering to 1 project
+
+WEEK 2-3: Integration
+  □ Create .agent/ folder in your workspace
+  □ Move recent deliverables with proper naming
+  □ Use Checkpoint Workflow on next complex task
+
+WEEK 4+: Mastery
+  □ Audit & prune skill count (maintain 5-15)
+  □ Track metrics (see IMPLEMENTATION_GUIDE.md)
+  □ Customize protocols for your role
+
+See IMPLEMENTATION_GUIDE.md for detailed phase-by-phase walkthrough.
+
+================================================================================
+FILE DESCRIPTIONS
+================================================================================
+
+manifest.json
+  Purpose: Official skill metadata for Claude's system
+  Use: Upload this when adding skill to Claude.ai
+  Size: 2.1 KB
+  Contains: Version, author, compatibility, integration mappings
+
+SKILL.md
+  Purpose: Core instruction set that Claude reads & follows
+  Use: Upload this with manifest.json, or paste into custom instructions
+  Size: 7.2 KB
+  Contains: 5 protocols, quick reference, integration guidelines
+
+README.md
+  Purpose: Documentation for GitHub and public understanding
+  Use: Include in GitHub repo, share with teams
+  Size: 7.4 KB
+  Contains: Features, quick start, core concepts, examples
+
+IMPLEMENTATION_GUIDE.md
+  Purpose: Detailed adoption roadmap for individuals and teams
+  Use: Reference for step-by-step implementation
+  Size: 12 KB
+  Contains: 3-phase adoption, team rollout, platform integration, metrics
+
+schema.json
+  Purpose: Machine-readable definition for validation & cross-platform use
+  Use: Technical integration with systems that support skill schemas
+  Size: 8.3 KB
+  Contains: JSON schema with examples and validation rules
+
+LICENSE.md
+  Purpose: MIT open source license
+  Use: Include with any distribution
+  Size: 1.6 KB
+  Contains: Full MIT license terms + summary
+
+================================================================================
+NEXT STEPS
+================================================================================
+
+IMMEDIATE (Do this now):
+  1. Choose upload option above (Option 1 recommended)
+  2. Upload files to Claude
+  3. Test by mentioning "agent" in your next prompt
+
+SHORT TERM (This week):
+  1. Read through SKILL.md to familiarize yourself
+  2. Apply Negative Constraints to your next design/code work
+  3. Create .agent/active_task.md for ongoing projects
+
+MEDIUM TERM (This month):
+  1. Work through IMPLEMENTATION_GUIDE.md phases
+  2. Track 3-5 metrics that matter to your role
+  3. Share with your team/network
+
+LONG TERM (Ongoing):
+  1. Monthly skill audit (maintain 5-15 active)
+  2. Quarterly optimization & learnings extraction
+  3. Contribute improvements back to the project
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+Q: "The constraints feel restrictive"
+A: Use "NO CONSTRAINTS" to override. Constraints prevent generic output,
+   not creativity. Customize them in SKILL.md section 2.
+
+Q: "I keep forgetting to use these protocols"
+A: Pin the quick reference card (SKILL.md section 9). Set calendar reminder
+   for weekly skill audits. Ask Claude which protocol to use.
+
+Q: "Checkpoint workflow seems slow"
+A: Skip for simple tasks. Combine PLAN+MOCK in one prompt. Track: time in
+   planning vs. rework — usually nets time savings.
+
+Q: "My team isn't adopting this"
+A: Start with Negative Constraints only (easiest ROI). Show metrics from
+   week 1. Make it mandatory in checklists. Celebrate quick wins.
+
+Full troubleshooting guide in IMPLEMENTATION_GUIDE.md section 5.
+
+================================================================================
+SUPPORT
+================================================================================
+
+Questions or Issues?
+  Email: bockrath.ai@gmail.com
+  GitHub: https://github.com/markbockrath/mab-ai-agent-skill (coming soon)
+
+Want to Customize?
+  Edit SKILL.md directly and re-upload
+  Document your changes in a VERSION_NOTES.md file
+
+Want to Contribute?
+  Submit pull requests on GitHub (future)
+  Share case studies of how it improved your work
+
+================================================================================
+KEY STATS
+================================================================================
+
+Package Size: 48 KB (negligible context overhead)
+Estimated Token Overhead: 500-800 tokens per session
+Time to First Value: <1 hour
+Recommended Skills per Session: 5-15 total
+Session Rotation Threshold: ~30 messages
+
+Version: 1.0.0
+License: MIT (free to use, modify, distribute)
+Status: Production Ready
+
+================================================================================
+YOU'RE ALL SET!
+================================================================================
+
+Everything is packaged and ready to upload. Choose your platform above
+and start using it immediately.
+
+Questions? Email: bockrath.ai@gmail.com
+Next up: GitHub repository setup (see IMPLEMENTATION_GUIDE.md)
+
+Good luck, and welcome to high-performance AI orchestration!
+
+─────────────────────────────────────────────────────────────────────────────
+Built with 🎯 by Mark Bockrath, MAB AI Strategies LLC
+Last Updated: 2026-04-02
+─────────────────────────────────────────────────────────────────────────────

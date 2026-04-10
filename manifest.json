@@ -1,0 +1,70 @@
+{
+  "skill_id": "agent-orchestration",
+  "name": "Agent Orchestration",
+  "version": "1.0.0",
+  "author": "MAB AI Strategies LLC",
+  "license": "MIT",
+  "description": "Protocols for managing the agentic environment, including skill evolution, checkpoint workflows, and negative constraint engineering. Maintains high-performance, focused interactions by preventing context bloat, enforcing design/code standards, and optimizing for token efficiency.",
+  "category": "system-prompt",
+  "tags": [
+    "agent-management",
+    "workflow-optimization",
+    "constraint-engineering",
+    "context-management",
+    "skill-curation"
+  ],
+  "compatibility": {
+    "min_version": "Claude 3.5 Sonnet",
+    "platforms": [
+      "claude.ai",
+      "Claude API",
+      "Claude App"
+    ]
+  },
+  "activation": {
+    "trigger_keywords": [
+      "agent",
+      "orchestration",
+      "skill management",
+      "negative constraints",
+      "checkpoint workflow",
+      "session hygiene",
+      "context bloat"
+    ],
+    "default_active": true,
+    "priority": "high"
+  },
+  "key_protocols": [
+    "Skill Sweet Spot Protocol",
+    "Negative Constraint Engineering",
+    "Checkpoint Workflow",
+    "Session Hygiene",
+    "Artifact Standards"
+  ],
+  "usage_guidelines": {
+    "best_for": [
+      "Managing complex multi-step projects",
+      "Preventing instruction conflict and context bloat",
+      "Maintaining high-quality design and code output",
+      "Optimizing token efficiency and reasoning clarity",
+      "Enabling productive agent-user collaboration"
+    ],
+    "not_for": [
+      "Simple single-step queries",
+      "Tasks requiring minimal output"
+    ]
+  },
+  "metrics": {
+    "estimated_token_overhead": "500-800 tokens per session",
+    "recommended_skills_per_session": "5-15",
+    "context_window_optimization": true
+  },
+  "related_skills": [
+    "resume-optimizer",
+    "proposal-pitch-deck-designer",
+    "ai-agent-development-deployment-architect"
+  ],
+  "support_url": "https://github.com/markbockrath/mab-ai-agent-skill",
+  "created_at": "2026-04-02T00:00:00Z",
+  "last_updated": "2026-04-02T00:00:00Z"
+}
